@@ -5,7 +5,8 @@ using System.Web;
 
 namespace Abogados.Models
 {
-    public class ClientModel
+    public class ClientModel:PersonModel
     {
+        public int ClientId { get; set; }
     }
 }

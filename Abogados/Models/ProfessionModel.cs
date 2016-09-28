@@ -7,5 +7,10 @@ namespace Abogados.Models
 {
     public class ProfessionModel
     {
+        public int ProfessionId { get; set; }
+
+        public string Name { get; set; }
+
+        public string Description { get; set; }
     }
 }

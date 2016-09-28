@@ -1,0 +1,95 @@
+﻿@model  Abogados.Models.LawyerModel
+
+@{
+    ViewBag.Title = "Abogados";
+}
+
+<h2>Abogados</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4></h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.LawyerId)
+        @Html.HiddenFor(model => model.PersonId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, "Nombre", new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+            @Html.LabelFor(model => model.LastName, "Apellido", new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+        </div>
+        <h1></h1>       
+        <div class="form-group">
+            @Html.LabelFor(model => model.DocType.DocType, "Tipo de Documento", new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.DocType.DocType)
+                @Html.ValidationMessageFor(model => model.DocType.DocType)
+            </div> 
+            @Html.LabelFor(model => model.DocNumber, "Numero de Documento", new { @class = "control-label col-md-2" })              
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.DocNumber)
+                @Html.ValidationMessageFor(model => model.DocNumber)
+            </div>            
+        </div>        
+        <h1></h1>   
+        <div class="form-group">
+            @Html.LabelFor(model => model.BirthDate, "Fecha de Nacimiento", new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.BirthDate)
+                @Html.ValidationMessageFor(model => model.BirthDate)
+            </div>
+            @Html.LabelFor(model => model.Genre, "Género", new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Genre)
+                @Html.ValidationMessageFor(model => model.Genre)
+            </div>
+        </div>
+        <h1></h1>
+        <div class="form-group">
+            @Html.LabelFor(model => model.E_Mail, "Correo Electrónico", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.E_Mail)
+                @Html.ValidationMessageFor(model => model.E_Mail)
+            </div>
+        </div>
+        <h1></h1>   
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nationality, "País", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nationality)
+                @Html.ValidationMessageFor(model => model.Nationality)
+            </div>
+        </div>
+        <h1></h1>   
+        <div class="form-group">
+            @Html.LabelFor(model => model.City, "Ciudad", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.City)
+                @Html.ValidationMessageFor(model => model.City)
+            </div>
+        </div>
+        <h1></h1>             
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, "Descripción", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+        </div>
+        <h1></h1>   
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

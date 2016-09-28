@@ -5,8 +5,10 @@ using System.Web;
 
 namespace Abogados.Models
 {
-    public class AccountantModel:PersonModel
+    public class DocTypeModel
     {
-        public int AccountantId { get; set; }
+        public int DocTypeId { get; set; }
+
+        public string DocType { get; set; }
     }
 }
