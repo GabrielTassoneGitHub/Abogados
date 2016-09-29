@@ -1,0 +1,40 @@
+﻿@model Abogados.Models.SpecializationModel
+
+@{
+    ViewBag.Title = "Especializaciones";
+}
+
+<h2>Especializaciones</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4></h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.SpecializationId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, "Especialización", new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>            
+        </div>
+        <h1>  </h1>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, "Descripción", new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.TextAreaFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>          
+        </div>        
+        <h1></h1>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

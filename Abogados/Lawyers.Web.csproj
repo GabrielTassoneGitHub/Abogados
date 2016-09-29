@@ -199,6 +199,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LawyersController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SpecializationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LawyerModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OrganizationModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\ProcedureModel.cs" />
     <Compile Include="Models\ProfessionModel.cs" />
@@ -279,6 +281,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Lawyers\Index.cshtml" />
     <Content Include="Views\Lawyers\Abogados.cshtml" />
+    <Content Include="Views\Specializations\Especializaciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
