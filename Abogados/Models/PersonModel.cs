@@ -38,16 +38,18 @@ namespace Abogados.Models
         public DateTime BirthDate { get; set; }
 
         [Required]
-        public string Nationality { get; set; }
-
-        [Required]
-        public string City { get; set; }
-
-        public string Genre { get; set; }
-
-        [Required]
         [EmailAddress]
         public string E_Mail { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Nationality { get; set; }
+
+        public string Province { get; set; }
+       
+        public string City { get; set; }
+
+        public string Genre { get; set; }       
 
         public string Description { get; set; }
     }

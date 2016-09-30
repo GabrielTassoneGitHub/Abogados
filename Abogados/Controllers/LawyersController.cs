@@ -15,13 +15,13 @@ namespace Abogados.Controllers
             return View();
         }
 
-        public ActionResult Abogados()
+        public ActionResult Edit()
         {
             return View(new LawyerModel { PersonId = 1 });
         }
 
         [HttpPost]
-        public ActionResult Abogados(LawyerModel abogado)
+        public ActionResult Edit(LawyerModel abogado)
         {
             var abogado1 = abogado;
 

@@ -1,0 +1,112 @@
+﻿@model  Abogados.Models.LawyerModel
+
+@{
+    ViewBag.Title = "Abogados";
+}
+
+<h2>Editar</h2>
+<h4>Abogados</h4>
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()    
+    <div class="form-horizontal">
+        <h4></h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.LawyerId) 
+        @Html.HiddenFor(model => model.PersonId)
+
+        <div class="form-group">            
+            <div class="col-md-2">
+                <label for="model.Name">Nombre</label>
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>     
+            <div class="col-md-1"> </div>       
+            <div class="col-md-2">
+                <label for="model.LastName">Apellido</label>
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+        </div>
+        <h1>  </h1>               
+        <div class="form-group">            
+            <div class="col-md-2">
+                <label for="model.DocType">Tipo de Documento</label>
+                @Html.EditorFor(model => model.DocType.DocType)
+                @Html.ValidationMessageFor(model => model.DocType.DocType)
+            </div>   
+            <div class="col-md-1"> </div>                    
+            <div class="col-md-2">
+                <label for="model.DocNumber">Numero de Documento</label>
+                @Html.EditorFor(model => model.DocNumber)
+                @Html.ValidationMessageFor(model => model.DocNumber)
+            </div>            
+        </div>        
+        <h1> </h1>   
+        <div class="form-group">
+            <div class="col-md-2">
+                <label for="model.E_Mail">Correo Electrónico</label>
+                @Html.EditorFor(model => model.E_Mail)
+                @Html.ValidationMessageFor(model => model.E_Mail)
+            </div>
+            <div class="col-md-1"> </div>
+            <div class="col-md-2">
+                <label for="model.PhoneNumber">Teléfono</label>
+                @Html.EditorFor(model => model.PhoneNumber)
+                @Html.ValidationMessageFor(model => model.PhoneNumber)
+            </div>
+        </div>
+        <h1> </h1>      
+        <div class="form-group">           
+            <div class="col-md-2">
+                <label for="model.BirthDate">Fecha de Nacimiento</label>
+                @Html.EditorFor(model => model.BirthDate)
+                @Html.ValidationMessageFor(model => model.BirthDate)
+            </div>     
+            <div class="col-md-1"> </div>       
+            <div class="col-md-2">
+                <label for="model.Genre">Género</label>
+                @Html.EditorFor(model => model.Genre)
+                @Html.ValidationMessageFor(model => model.Genre)
+            </div>
+        </div>
+        <h1></h1>          
+        <div class="form-group">            
+            <div class="col-md-2">
+                <label for="model.Nationality">País</label>
+                @Html.EditorFor(model => model.Nationality)
+                @Html.ValidationMessageFor(model => model.Nationality)
+            </div>
+            <div class="col-md-1"> </div>
+            <div class="col-md-2">
+                <label for="model.Province">Provincia</label>
+                @Html.EditorFor(model => model.Province)
+                @Html.ValidationMessageFor(model => model.Province)
+            </div>
+        </div>
+        <h1></h1>   
+        <div class="form-group">            
+            <div class="col-md-2">
+                <label for="model.City">Ciudad</label>
+                @Html.EditorFor(model => model.City)
+                @Html.ValidationMessageFor(model => model.City)
+            </div>
+        </div>
+        <h1></h1>             
+        <div class="form-group">           
+            <div class="col-md-2">
+                <label for="model.Description">Descripción</label>
+                @Html.TextAreaFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+        </div>
+        <h1></h1>   
+        <div class="form-group">
+            <div class="col-md-2">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>            
+        </div>
+    </div>
+}
