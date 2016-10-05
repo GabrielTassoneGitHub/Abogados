@@ -6,27 +6,26 @@
     <title>@ViewBag.Title - K. U. y Asociados</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<body>       
+    <div class="navbar navbar-inverse navbar-fixed-top">        
+        <div class="container">                   
+            <div class="navbar-header">                                 
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">                                      
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Estudio Jurídico K. U. y Asociados", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                </button>                
+            </div>                  
+            <div class="navbar-collapse collapse">     
+                <h1>Estudio Jurídico K. U. y Asociados</h1>
+                <ul class="nav navbar-nav">                    
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("El Estudio", "About", "Home")</li>
+                    <li>@Html.ActionLink("El Estudio", "Index", "Study")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Abogados", "Edit", "Lawyers")</li>
+                    <li>@Html.ActionLink("Staff", "Create", "Person")</li>
                     <li>@Html.ActionLink("Especializaciones", "Especializaciones", "Specializations")</li>
-                </ul>
+                </ul>                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -35,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>Copyright &copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
 

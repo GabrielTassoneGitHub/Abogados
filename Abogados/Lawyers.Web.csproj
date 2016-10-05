@@ -197,10 +197,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LawyersController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SpecializationsController.cs" />
+    <Compile Include="Controllers\StudyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -282,10 +282,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Lawyers\Index.cshtml" />
-    <Content Include="Views\Lawyers\Edit.cshtml" />
     <Content Include="Views\Specializations\Especializaciones.cshtml" />
     <Content Include="Views\Person\Create.cshtml" />
+    <Content Include="Views\Study\Index.cshtml" />
+    <Content Include="Views\Study\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
