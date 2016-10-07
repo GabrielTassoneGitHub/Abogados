@@ -39,6 +39,7 @@ namespace Abogados.Models
 
         [Required]
         [EmailAddress]
+        [DisplayName("Correo Electrónico")]
         public string E_Mail { get; set; }
 
         public string PhoneNumber { get; set; }

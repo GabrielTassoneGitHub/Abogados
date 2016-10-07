@@ -286,6 +286,9 @@
     <Content Include="Views\Person\Create.cshtml" />
     <Content Include="Views\Study\Index.cshtml" />
     <Content Include="Views\Study\Edit.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Person\Edit.cshtml" />
+    <Content Include="Views\Person\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -316,7 +319,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55625</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55625/</IISUrl>
+          <IISUrl>http://localhost:55635/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

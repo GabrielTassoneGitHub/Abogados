@@ -13,7 +13,14 @@ namespace Abogados.Controllers
         // GET: Person
         public ActionResult Index()
         {
-            return View();
+            
+            var personas = new List<PersonModel>();
+            for (int i = 0; i < 10; i++)
+            {
+                personas.Add(new PersonModel { Name = "Persona " + i });
+            }
+
+            return View(personas);
         }
 
         // GET: Person/Details/5
@@ -38,8 +45,8 @@ namespace Abogados.Controllers
                 // TODO: Add insert logic here
                 if (ModelState.IsValid == true)
                 {
-
-                    return RedirectToAction("CreateLawyer");
+                    
+                    return RedirectToAction("Index");
                 }
                 else
                 {
