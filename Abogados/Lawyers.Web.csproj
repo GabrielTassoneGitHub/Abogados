@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SpecializationsController.cs" />
     <Compile Include="Controllers\StudyController.cs" />
@@ -213,6 +214,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LawyerModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NewsModel.cs" />
     <Compile Include="Models\OrganizationModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\ProcedureModel.cs" />
@@ -289,6 +291,7 @@
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Person\Edit.cshtml" />
     <Content Include="Views\Person\Details.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
