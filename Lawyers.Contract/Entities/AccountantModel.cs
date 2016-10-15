@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lawyers.Services
+namespace Lawyers.Contract.Entities
 {
-    public class Class1
+    public class AccountantModel : PersonModel
     {
+        public int AccountantId { get; set; }
     }
 }

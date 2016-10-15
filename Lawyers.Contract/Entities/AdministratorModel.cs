@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lawyers.DataAccess
+namespace Lawyers.Contract.Entities
 {
-    public class Class1
+    public class AdministratorModel : PersonModel
     {
+        public int AdminId { get; set; }
     }
 }

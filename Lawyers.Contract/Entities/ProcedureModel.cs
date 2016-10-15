@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Abogados.Models
+namespace Lawyers.Contract.Entities
 {
     public class ProcedureModel
     {
         public int ProcedureId { get; set; }
 
-        [Required]        
+        [Required]
         public ClientModel Client { get; set; }
     }
 }

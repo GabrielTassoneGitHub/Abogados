@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Abogados.Models;
-
+using Lawyers.Contract.Entities;
 
 namespace Abogados.Controllers
 {

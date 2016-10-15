@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Abogados.Models
+namespace Lawyers.Contract.Entities
 {
-    public class LawyerModel:PersonModel
+    public class LawyerModel : PersonModel
     {
         public int LawyerId { get; set; }
 

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Abogados.Models
+namespace Lawyers.Contract.Entities
 {
-    public class SpecializationModel
+    public class ProfessionModel
     {
-        public int SpecializationId { get; set; }
+        public int ProfessionId { get; set; }
 
         public string Name { get; set; }
 

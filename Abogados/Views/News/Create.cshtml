@@ -1,4 +1,4 @@
-﻿@model Abogados.Models.NewsModel
+﻿@model Lawyers.Contract.Entities.NewsModel
 
 @{
     ViewBag.Title = "Create";
@@ -15,7 +15,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.NewsId)        
-
+        
         <div class="form-group">            
             <div class="col-md-10">
                 <label for="model.Date">Fecha: @DateTime.Now.ToShortDateString()</label>                

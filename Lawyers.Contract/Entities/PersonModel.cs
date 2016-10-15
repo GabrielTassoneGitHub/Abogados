@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Abogados.Models
+namespace Lawyers.Contract.Entities
 {
     public class PersonModel
     {
-        
+
         public int PersonId { get; set; }
 
         public string Username { get; set; }
@@ -24,13 +25,13 @@ namespace Abogados.Models
         [Required]
         [StringLength(160)]
         [DisplayName("Apellido")]
-        public string LastName { get; set; }        
+        public string LastName { get; set; }
 
         [Required]
         public DocTypeModel DocType { get; set; }
 
         [Required]
-        [Range(3000000,100000000)]
+        [Range(3000000, 100000000)]
         public int DocNumber { get; set; }
 
         [Required]
@@ -47,10 +48,10 @@ namespace Abogados.Models
         public string Nationality { get; set; }
 
         public string Province { get; set; }
-       
+
         public string City { get; set; }
 
-        public string Genre { get; set; }       
+        public string Genre { get; set; }
 
         public string Description { get; set; }
     }
