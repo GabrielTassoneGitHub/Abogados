@@ -1,0 +1,160 @@
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.Services.dll.config
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.Contract.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.DataAccess.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\WebActivatorEx.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.Contract.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Lawyers.DataAccess.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\obj\Debug\Lawyers.Services.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\obj\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Abogados-master\Lawyers.Services\obj\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\obj\Debug\Lawyers.Services.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\obj\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\obj\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.Services.dll.config
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.Contract.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.DataAccess.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\WebActivatorEx.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.Contract.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Lawyers.DataAccess.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\WebMatrix.Data.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\WebMatrix.Data.xml
+C:\Users\Usuario\Source\Repos\Abogados-master-prueba2\Lawyers.Services\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.Services.dll.config
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.Contract.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.DataAccess.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\WebActivatorEx.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\WebMatrix.Data.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.Contract.pdb
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Lawyers.DataAccess.pdb
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\WebMatrix.Data.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\obj\Debug\Lawyers.Services.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\obj\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Abogados\Lawyers.Services\obj\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.Services.dll.config
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.Services.pdb
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.Contract.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.DataAccess.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\WebActivatorEx.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\WebMatrix.Data.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.Contract.pdb
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Lawyers.DataAccess.pdb
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\WebMatrix.Data.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\obj\Debug\Lawyers.Services.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\obj\Debug\Lawyers.Services.dll
+C:\Users\Usuario\Source\Repos\Back - up 3-11\Abogados\Lawyers.Services\obj\Debug\Lawyers.Services.pdb
