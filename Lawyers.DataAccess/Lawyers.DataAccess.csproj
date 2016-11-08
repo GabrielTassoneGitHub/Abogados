@@ -61,6 +61,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
@@ -98,21 +100,106 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accountant.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataControl.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataControl.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataControl.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataControl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataControl.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DocType.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lawyer.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Procedure.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profession.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Province.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Roles.cs">
+      <DependentUpon>DataControl.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lawyers.Contract\Lawyers.Contract.csproj">
-      <Project>{19a3867d-eea3-4739-b496-ee1896011cac}</Project>
-      <Name>Lawyers.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lawyers.Services\Lawyers.Services.csproj">
-      <Project>{901f70e2-1a62-49af-bdc8-542d557e42ad}</Project>
-      <Name>Lawyers.Services</Name>
-    </ProjectReference>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataControl.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataControl.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataControl.edmx.diagram">
+      <DependentUpon>DataControl.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataControl.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataControl.edmx</DependentUpon>
+      <LastGenOutput>DataControl.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataControl.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataControl.edmx</DependentUpon>
+      <LastGenOutput>DataControl.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

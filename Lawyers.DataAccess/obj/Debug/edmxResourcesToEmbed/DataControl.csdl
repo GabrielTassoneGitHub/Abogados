@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LawyersDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accountant">
+    <Key>
+      <PropertyRef Name="AccountantId" />
+    </Key>
+    <Property Name="AccountantId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_Accountants_Persons" FromRole="Accountants" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="AdministratorId" />
+    </Key>
+    <Property Name="AdministratorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_Administrators_Persons" FromRole="Administrators" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProvinceId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Province" Relationship="Self.FK_Cities_Provinces" FromRole="Cities" ToRole="Provinces" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_Clients_Persons" FromRole="Clients" ToRole="Persons" />
+    <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_Clients" FromRole="Clients" ToRole="Procedures" />
+  </EntityType>
+  <EntityType Name="DocType">
+    <Key>
+      <PropertyRef Name="DocTypeId" />
+    </Key>
+    <Property Name="DocTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocType1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK_Persons_DocTypes" FromRole="DocTypes" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="Lawyer">
+    <Key>
+      <PropertyRef Name="LawyerId" />
+    </Key>
+    <Property Name="LawyerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SpecializationId" Type="Int32" Nullable="false" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_Lawyers_Persons" FromRole="Lawyers" ToRole="Persons" />
+    <NavigationProperty Name="Specialization" Relationship="Self.FK_Lawyers_Specializations" FromRole="Lawyers" ToRole="Specializations" />
+    <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_Lawyers" FromRole="Lawyers" ToRole="Procedures" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewsId" />
+    </Key>
+    <Property Name="NewsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DocTypeId" Type="Int32" Nullable="false" />
+    <Property Name="DocNumber" Type="Int32" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Nationality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Genre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProfessionId" Type="Int32" />
+    <NavigationProperty Name="Accountants" Relationship="Self.FK_Accountants_Persons" FromRole="Persons" ToRole="Accountants" />
+    <NavigationProperty Name="Administrators" Relationship="Self.FK_Administrators_Persons" FromRole="Persons" ToRole="Administrators" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Persons" FromRole="Persons" ToRole="Clients" />
+    <NavigationProperty Name="DocType" Relationship="Self.FK_Persons_DocTypes" FromRole="Persons" ToRole="DocTypes" />
+    <NavigationProperty Name="Lawyers" Relationship="Self.FK_Lawyers_Persons" FromRole="Persons" ToRole="Lawyers" />
+    <NavigationProperty Name="Profession" Relationship="Self.FK_Persons_Professions" FromRole="Persons" ToRole="Professions" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Persons_Users" FromRole="Persons" ToRole="Users" />
+    <NavigationProperty Name="Secretaries" Relationship="Self.FK_Secretaries_Persons" FromRole="Persons" ToRole="Secretaries" />
+  </EntityType>
+  <EntityType Name="Procedure">
+    <Key>
+      <PropertyRef Name="ProcedureId" />
+    </Key>
+    <Property Name="ProcedureId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Topic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LawyerId" Type="Int32" Nullable="false" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_Procedures_Clients" FromRole="Procedures" ToRole="Clients" />
+    <NavigationProperty Name="Lawyer" Relationship="Self.FK_Procedures_Lawyers" FromRole="Procedures" ToRole="Lawyers" />
+    <NavigationProperty Name="State" Relationship="Self.FK_Procedures_States" FromRole="Procedures" ToRole="States" />
+  </EntityType>
+  <EntityType Name="Profession">
+    <Key>
+      <PropertyRef Name="ProfessionId" />
+    </Key>
+    <Property Name="ProfessionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK_Persons_Professions" FromRole="Professions" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="ProvinceId" />
+    </Key>
+    <Property Name="ProvinceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK_Cities_Provinces" FromRole="Provinces" ToRole="Cities" />
+  </EntityType>
+  <EntityType Name="Secretary">
+    <Key>
+      <PropertyRef Name="SecretaryId" />
+    </Key>
+    <Property Name="SecretaryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_Secretaries_Persons" FromRole="Secretaries" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="Specialization">
+    <Key>
+      <PropertyRef Name="SpecializationId" />
+    </Key>
+    <Property Name="SpecializationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Lawyers" Relationship="Self.FK_Lawyers_Specializations" FromRole="Specializations" ToRole="Lawyers" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Procedures" Relationship="Self.FK_Procedures_States" FromRole="States" ToRole="Procedures" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK_Persons_Users" FromRole="Users" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Accountants_Persons">
+    <End Role="Persons" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accountants" Type="Self.Accountant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Accountants">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Administrators_Persons">
+    <End Role="Persons" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Administrators" Type="Self.Administrator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Administrators">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cities_Provinces">
+    <End Role="Provinces" Type="Self.Province" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Cities" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provinces">
+        <PropertyRef Name="ProvinceId" />
+      </Principal>
+      <Dependent Role="Cities">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Persons">
+    <End Role="Persons" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Clients" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Procedures_Clients">
+    <End Role="Clients" Type="Self.Client" Multiplicity="1" />
+    <End Role="Procedures" Type="Self.Procedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientId" />
+      </Principal>
+      <Dependent Role="Procedures">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persons_DocTypes">
+    <End Role="DocTypes" Type="Self.DocType" Multiplicity="1" />
+    <End Role="Persons" Type="Self.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocTypes">
+        <PropertyRef Name="DocTypeId" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="DocTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lawyers_Persons">
+    <End Role="Persons" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Lawyers" Type="Self.Lawyer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Lawyers">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lawyers_Specializations">
+    <End Role="Specializations" Type="Self.Specialization" Multiplicity="1" />
+    <End Role="Lawyers" Type="Self.Lawyer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specializations">
+        <PropertyRef Name="SpecializationId" />
+      </Principal>
+      <Dependent Role="Lawyers">
+        <PropertyRef Name="SpecializationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Procedures_Lawyers">
+    <End Role="Lawyers" Type="Self.Lawyer" Multiplicity="1" />
+    <End Role="Procedures" Type="Self.Procedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lawyers">
+        <PropertyRef Name="LawyerId" />
+      </Principal>
+      <Dependent Role="Procedures">
+        <PropertyRef Name="LawyerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persons_Professions">
+    <End Role="Professions" Type="Self.Profession" Multiplicity="0..1" />
+    <End Role="Persons" Type="Self.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Professions">
+        <PropertyRef Name="ProfessionId" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="ProfessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persons_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Persons" Type="Self.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Secretaries_Persons">
+    <End Role="Persons" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Secretaries" Type="Self.Secretary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Secretaries">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Procedures_States">
+    <End Role="States" Type="Self.State" Multiplicity="1" />
+    <End Role="Procedures" Type="Self.Procedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="States">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Procedures">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LawyersConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accountants" EntityType="Self.Accountant" />
+    <EntitySet Name="Administrators" EntityType="Self.Administrator" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="DocTypes" EntityType="Self.DocType" />
+    <EntitySet Name="Lawyers" EntityType="Self.Lawyer" />
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Persons" EntityType="Self.Person" />
+    <EntitySet Name="Procedures" EntityType="Self.Procedure" />
+    <EntitySet Name="Professions" EntityType="Self.Profession" />
+    <EntitySet Name="Provinces" EntityType="Self.Province" />
+    <EntitySet Name="Secretaries" EntityType="Self.Secretary" />
+    <EntitySet Name="Specializations" EntityType="Self.Specialization" />
+    <EntitySet Name="States" EntityType="Self.State" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" />
+    <AssociationSet Name="FK_Accountants_Persons" Association="Self.FK_Accountants_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Accountants" EntitySet="Accountants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Administrators_Persons" Association="Self.FK_Administrators_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Administrators" EntitySet="Administrators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cities_Provinces" Association="Self.FK_Cities_Provinces">
+      <End Role="Provinces" EntitySet="Provinces" />
+      <End Role="Cities" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Persons" Association="Self.FK_Clients_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Procedures_Clients" Association="Self.FK_Procedures_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Procedures" EntitySet="Procedures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persons_DocTypes" Association="Self.FK_Persons_DocTypes">
+      <End Role="DocTypes" EntitySet="DocTypes" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lawyers_Persons" Association="Self.FK_Lawyers_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Lawyers" EntitySet="Lawyers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lawyers_Specializations" Association="Self.FK_Lawyers_Specializations">
+      <End Role="Specializations" EntitySet="Specializations" />
+      <End Role="Lawyers" EntitySet="Lawyers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Procedures_Lawyers" Association="Self.FK_Procedures_Lawyers">
+      <End Role="Lawyers" EntitySet="Lawyers" />
+      <End Role="Procedures" EntitySet="Procedures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persons_Professions" Association="Self.FK_Persons_Professions">
+      <End Role="Professions" EntitySet="Professions" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persons_Users" Association="Self.FK_Persons_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Secretaries_Persons" Association="Self.FK_Secretaries_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Secretaries" EntitySet="Secretaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Procedures_States" Association="Self.FK_Procedures_States">
+      <End Role="States" EntitySet="States" />
+      <End Role="Procedures" EntitySet="Procedures" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
