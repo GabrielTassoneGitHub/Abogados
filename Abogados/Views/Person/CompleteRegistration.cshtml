@@ -1,0 +1,59 @@
+﻿@model Lawyers.Contract.Entities.LawyerModel
+
+@{
+    ViewBag.Title = "CompleteRegistration";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.PersonId)
+        @Html.HiddenFor(model => model.LawyerId)
+
+        <div class="w3-container w3-green">
+            <h2>Datos Profesionales</h2>
+        </div>
+        <hr />
+        <form>
+            <fieldset>
+                <legend></legend>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label for="model.Name">Nombre</label>
+                        @Html.EditorFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                    <div class="col-md-2"> </div>
+                    <div class="col-md-2">
+                        <label for="model.LastName">Apellido</label>
+                        @Html.EditorFor(model => model.LastName)
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <strong><input type="submit" value="Guardar" class="w3-btn w3-white w3-border w3-round-large w3-border-green w3-text-green" /></strong>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

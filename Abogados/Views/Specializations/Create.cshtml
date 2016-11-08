@@ -1,0 +1,57 @@
+﻿@model Lawyers.Contract.Entities.SpecializationModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.SpecializationId) 
+        <div class="w3-container w3-green">
+            <h2>Especializaciones</h2>
+        </div>
+        <hr/>
+        <form>
+            <fieldset>
+                <legend></legend>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label for="model.Name">Nombre especialización</label>
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label for="model.Description">Descripción</label>
+                        @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <strong><input type="submit" value="Guardar" class="w3-btn w3-white w3-border w3-round-large w3-border-green w3-text-green" /></strong>
+                    </div>
+                </div>
+            </fieldset>
+        </form>          
+    </div>
+}
+<p>
+    <a class="w3-btn w3-white w3-border w3-round-large w3-border-green w3-text-green col-lg-offset-11 w3-margin-top" href="~/Specializations/Index">
+        <i class="material-icons w3-medium w3-text-green"><strong>arrow_back</strong></i><strong> Volver</strong>
+    </a>
+</p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

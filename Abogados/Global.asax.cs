@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using WebMatrix.WebData;
+using System.Data.SqlClient;
 
 namespace Abogados
 {
@@ -12,6 +14,7 @@ namespace Abogados
     {
         protected void Application_Start()
         {
+            WebSecurity.InitializeDatabaseConnection("DefaultConnection", "Users", "UserId", "UserName", false);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -1,40 +1,91 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
-<div><img src="http://www.estudio-ofarrell.com.ar/wp-content/uploads/2015/10/slider-2.jpg" class="ls-bg" alt="Slide background" style="padding: 0px; 
-    border-width: 0px; width:1660px; height:auto; margin-left: -380px; margin-top: -0px; margin-bottom: 48px; visibility:visible;">
-</div>    
-  
-<hr />
+<style>
+    .mySlides {
+        display: none;
+    }
 
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-4">
-            <a href="~/Home/Index">
-                <img src="http://www.estudioracciatti.com.ar/img/estudio.jpg" width="263" heigth="185" alt="" />
-            </a>
-            <h3>El estudio</h3>
-            <p>
-                ¿Quiénes somos? Nuestra historia y valores. <br />
-                Vision y misión
-            </p>
+    .w3-left, .w3-right, .w3-badge {
+        cursor: pointer;
+    }
 
-            <p><a class="btn btn-default" href="~/Study/Index">Acceder</a></p>
-        </div>
-        <div class="col-md-4">
+    .w3-badge {
+        height: 13px;
+        width: 13px;
+        padding: 0;
+    }
+</style>
 
-        </div>
-        <div class="col-md-4">
-            <a href="~/Home/Index">
-                <img src="http://www.estudioracciatti.com.ar/img/pc.jpg" width="263" heigth="185" alt="" />
-            </a>
-            <h3>Contacto</h3>
-            <p>
-                Ubicación y medios de contacto.
-            </p>
-
-            <p><a class="btn btn-default" href="~/Home/Index">Acceder</a></p>
-        </div>
+<div class="w3-content w3-display-container" style="max-width:2000px">
+    <img class="mySlides" src="http://www.estudio-ofarrell.com.ar/wp-content/uploads/2015/10/slider-2.jpg" style="width:100%">
+    <img class="mySlides" src="http://www.estudio-ofarrell.com.ar/wp-content/uploads/2015/10/slider-1.jpg" style="width:100%">
+    <img class="mySlides" src="http://www.estudio-ofarrell.com.ar/wp-content/uploads/2015/10/slider-3.jpg" style="width:100%">
+    <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
     </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+</script> 
+ 
+  
+<div class="w3-container w3-padding-32" id="about" style="text-align: justify;">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-12"><strong>¿Quiénes somos?</strong></h2>
+    <p>        
+        El estudio K. U. y Asociados desempeña sus funciones en la Provincia de Santa Fe, Argentina, con sede en la ciudad de Rafaela, donde ofrece asesoramiento jurídico integral en el marco empresarial.
+    </p>
+    <h3 class="w3-padding-12">Historia</h3>
+    <p>Fue fundado por el Doctor Martín F. Rodriguez en el año 1983, incorporándose con el correr del tiempo distintos profesionales hasta alcanzar su composición actual. Todo ello acompañado del crecimiento del Estudio y en busca de una profundización de la eficiencia en la prestación de los servicios profesionales con disminución de los costos operativos.</p>
+    <p>Actualmente el estudio cuenta con 15 personas, de las cuales podemos distinguir 7 abogados, 1 contador público, 1 administradora de recursos humanos y 1 secretaria.</p>
+    <p>Las ramas en las que el estudio se desempeña son: Derecho penal, Relaciones domésticas, Derecho empresarial y comercial, Bienes raíces e Inmigración. Planeamos incorporar nuevas áreas de trabajo con el paso del tiempo.</p>
+    
+    <h3 class="w3-padding-12">Misión</h3>
+    <p>Ser un estudio de abogados reconocido por su alta calidad en la asistencia jurídica y la profesionalidad de sus miembros, brindando seguridad  y confianza a través de soluciones integrales y adecuadas a las necesidades de cada cliente, con el compromiso del éxito en sus negocios. Asimismo, lograr la realización personal y profesional de los miembros del Estudio, dentro de los más altos estándares éticos y de excelencia.</p>
+    <h3 class="w3-padding-12">Visión</h3>
+    <p>Ser un estudio jurídico líder en el mercado legal argentino, consolidando su crecimiento con experiencia y eficiencia profesional, ofreciendo un servicio integral de calidad en asesoría y consultoría legal, con reconocido prestigio por sus valores y eficacia demostrada.</p>
+    <h3 class="w3-padding-12">Valores</h3>
+    <p>> Ética</p>
+    <p>> Compromiso</p>
+    <p>> Calidad</p>
+    <p>> Confidencialidad</p>
+    <h5 class="w3-padding-12"><strong>Consideramos que cada cliente es único y, por lo tanto, recibir asesoramiento personalizado con base en la discreción y la generación de resultados concretos que agreguen valor.</strong></h5>
+</div>
+
+<div class="w3-container w3-padding-12" id="Noticias">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-12"><strong>Noticias</strong></h2>
+
 </div>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Lawyers.Contract.Entities.SpecializationModel>
+
+@{
+    ViewBag.Title = "Especializaciones";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<h3><strong>Especializaciones</strong></h3>
+
+<table class="w3-table-all w3-margin-bottom">
+    <thead>
+        <tr class="w3-green">
+            <th>
+                @Html.DisplayNameFor(model => model.SpecializationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecializationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <i class="material-icons w3-medium"><strong>edit</strong></i>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                <i class="material-icons w3-medium w3-text-red"><strong>close</strong></i>
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+</table>
+
+
+<p>
+    <a class="w3-btn w3-white w3-border w3-round-large w3-border-green w3-text-green" href="~/Specializations/Create">
+        <i class="material-icons w3-medium w3-text-green"><strong>add</strong></i><strong> Agregar</strong></a>
+</p>
+
+

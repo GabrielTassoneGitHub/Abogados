@@ -97,6 +97,10 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.2.3\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -161,6 +165,14 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -263,7 +275,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -297,7 +311,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Specializations\Especializaciones.cshtml" />
     <Content Include="Views\Person\Create.cshtml" />
     <Content Include="Views\Study\Index.cshtml" />
     <Content Include="Views\Study\Edit.cshtml" />
@@ -306,6 +319,9 @@
     <Content Include="Views\Person\Details.cshtml" />
     <Content Include="Views\News\Create.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Specializations\Create.cshtml" />
+    <Content Include="Views\Specializations\Index.cshtml" />
+    <Content Include="Views\Person\CompleteRegistration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +338,14 @@
     <ProjectReference Include="..\Lawyers.Contract\Lawyers.Contract.csproj">
       <Project>{19a3867d-eea3-4739-b496-ee1896011cac}</Project>
       <Name>Lawyers.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lawyers.DataAccess\Lawyers.DataAccess.csproj">
+      <Project>{DC7F2ACF-BB00-4BFB-A480-E6BE3C9FD22E}</Project>
+      <Name>Lawyers.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lawyers.Services\Lawyers.Services.csproj">
+      <Project>{901F70E2-1A62-49AF-BDC8-542D557E42AD}</Project>
+      <Name>Lawyers.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

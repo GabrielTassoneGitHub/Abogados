@@ -1,17 +1,68 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+
+<form class="w3-container w3-padding-16 w3-white">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-12"><strong>Contacto</strong></h2>
+    <p>Contáctenos, respondemos a la brevedad.</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Bv Santa Fe 215. Rafaela, Santa Fe, Argentina<br>
+    <i class="fa fa-phone" style="width:30px"></i> Teléfono: (03492)-502672<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: contacto@estudioKU.com<br>
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+            <div class="w3-group">
+                <label>Your Name</label>
+                <input class="w3-input w3-border" type="text">
+            </div>
+        </div>
+        <div class="w3-half">
+            <div class="w3-group">
+                <label>Email</label>
+                <input class="w3-input w3-border" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="w3-group">
+        <label>Subject</label>
+        <input class="w3-input w3-border" type="text">
+    </div>
+    <button type="button" class="w3-btn">Send</button>
+</form>
+
+<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+
+    var myCenter = new google.maps.LatLng(-31.2667, -61.4833);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>

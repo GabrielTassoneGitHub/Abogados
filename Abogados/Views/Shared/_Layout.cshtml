@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+
     <title>@ViewBag.Title - K. U. y Asociados</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -17,15 +22,15 @@
                     <span class="icon-bar"></span>
                 </button>                
             </div>      
-            <div class="navbar-collapse collapse">     
-                <h1>Estudio Jurídico K. U. y Asociados</h1>
-                <ul class="nav navbar-nav">                    
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Noticias", "Create", "News")</li>
-                    <li>@Html.ActionLink("El Estudio", "Index", "Study")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Staff", "Index", "Person")</li>
-                    <li>@Html.ActionLink("Especializaciones", "Especializaciones", "Specializations")</li>
+            <div class="navbar-collapse collapse"> 
+                <h1 class="w3-text-amber">Estudio Jurídico K. U. y Asociados</h1>
+                <ul class="nav navbar-nav"> 
+                    <li><a class="w3-hover-green" @Html.ActionLink("Inicio", "Index", "Home") </a></li>
+                    <li><a class="w3-hover-green" @Html.ActionLink("Noticias", "Index", "News")</a></li>
+                    <li><a class="w3-hover-green" @Html.ActionLink("El Estudio", "About", "Home")</a></li>
+                    <li><a class="w3-hover-green" @Html.ActionLink("Contacto", "Contact", "Home")</a></li>
+                    <li><a class="w3-hover-green" @Html.ActionLink("Staff", "Index", "Person")</a></li>
+                    <li><a class="w3-hover-green" @Html.ActionLink("Especializaciones", "Index", "Specializations")</a></li>
                 </ul>                
                 @Html.Partial("_LoginPartial")
             </div>

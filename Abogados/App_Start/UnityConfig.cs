@@ -1,6 +1,11 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using Lawyers.Services;
+using Lawyers.Contract.Interfaces;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Abogados.Controllers;
 
 namespace Abogados.App_Start
 {
@@ -37,6 +42,15 @@ namespace Abogados.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<INewService, NewService>();
+            container.RegisterType<ISpecializationService, SpecializationService>();
+            container.RegisterType<IDocTypeService, DocTypeService>();
+            container.RegisterType<ICityService, CityService>();
+            container.RegisterType<IProvinceService, ProvinceService>();
+            container.RegisterType<IPersonService, PersonService>();
+            container.RegisterType<IProfessionService, ProfessionService>();
+            container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<ManageController>(new InjectionConstructor());
         }
     }
 }

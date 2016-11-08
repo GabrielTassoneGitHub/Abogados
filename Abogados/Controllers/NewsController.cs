@@ -1,17 +1,29 @@
-﻿using System;
+﻿using Lawyers.Contract.Entities;
+using Lawyers.Contract.Interfaces;
+using Lawyers.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebMatrix.WebData;
 
 namespace Abogados.Controllers
 {
     public class NewsController : Controller
     {
+        private INewService service;
+
+        public NewsController(INewService service)
+        {
+            this.service = service;
+        }
         // GET: News
         public ActionResult Index()
         {
-            return View();
+            //ViewBag.Mensaje = service.NewsList();
+
+            return View(service.NewsList());
         }
 
         // GET: News/Details/5
@@ -28,13 +40,21 @@ namespace Abogados.Controllers
 
         // POST: News/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create([Bind(Include = "Date,Title,Body")]NewsModel noticia)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    service.Create(noticia);
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View(noticia);
+                }
+                
             }
             catch
             {
