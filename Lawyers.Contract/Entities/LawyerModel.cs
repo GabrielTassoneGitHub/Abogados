@@ -9,12 +9,9 @@ namespace Lawyers.Contract.Entities
 {
     public class LawyerModel : PersonModel
     {
-        public int LawyerId { get; set; }
+        public int LawyerId { get; set; }        
 
-        [Required]
-        public ProfessionModel Profession { get; set; }
-
-        [Required]
+        
         public SpecializationModel Specialization { get; set; }
     }
 }

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Lawyers.Contract.Entities
 {
-    public class SpecializationModel
+    public class StateModel
     {
-        public int SpecializationId { get; set; }
+        public int StateId { get; set; }
 
         [Required]
-        [StringLength(160)]
-        [Display(Name = "Nombre especializacion")]
+        [StringLength(20)]
+        [Display(Name = "Estado")]
         public string Name { get; set; }
 
-        [Display(Name = "Descripcion")]
+        [Display(Name = "")]
         public string Description { get; set; }
     }
 }

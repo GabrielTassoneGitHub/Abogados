@@ -101,9 +101,20 @@
     <Compile Include="Entities\ProcedureModel.cs" />
     <Compile Include="Entities\ProfessionModel.cs" />
     <Compile Include="Entities\ProvinceModel.cs" />
+    <Compile Include="Entities\SecretaryModel.cs" />
     <Compile Include="Entities\SpecializationModel.cs" />
     <Compile Include="Entities\OrganizationModel.cs" />
+    <Compile Include="Entities\StateModel.cs" />
+    <Compile Include="Entities\UserModel.cs" />
+    <Compile Include="Interfaces\ICityService.cs" />
+    <Compile Include="Interfaces\IDocTypeService.cs" />
     <Compile Include="Interfaces\INewService.cs" />
+    <Compile Include="Interfaces\IPersonService.cs" />
+    <Compile Include="Interfaces\IProcedureService.cs" />
+    <Compile Include="Interfaces\IProfessionService.cs" />
+    <Compile Include="Interfaces\IProvinceService.cs" />
+    <Compile Include="Interfaces\ISpecializationService.cs" />
+    <Compile Include="Interfaces\IUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

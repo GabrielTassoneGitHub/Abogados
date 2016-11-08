@@ -13,9 +13,7 @@ namespace Lawyers.Contract.Entities
 
         public int PersonId { get; set; }
 
-        public string Username { get; set; }
-
-        public string Password { get; set; }
+        public int UserId { get; set; }
 
         [Required]
         [StringLength(160)]
@@ -28,31 +26,39 @@ namespace Lawyers.Contract.Entities
         public string LastName { get; set; }
 
         [Required]
+        [DisplayName("Tipo de documento")]
         public DocTypeModel DocType { get; set; }
 
         [Required]
         [Range(3000000, 100000000)]
+        [DisplayName("Numero de documento")]
         public int DocNumber { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
+        [DisplayName("Fecha de nacimiento")]
         public DateTime BirthDate { get; set; }
 
-        [Required]
-        [EmailAddress]
-        [DisplayName("Correo Electrónico")]
-        public string E_Mail { get; set; }
-
+        [DisplayName("Teléfono / Celular")]
         public string PhoneNumber { get; set; }
 
+        [DisplayName("País")]
         public string Nationality { get; set; }
 
+        [DisplayName("Provincia")]
         public string Province { get; set; }
 
+        [DisplayName("Ciudad")]
         public string City { get; set; }
 
+        [DisplayName("Genero")]
         public string Genre { get; set; }
 
+        
+        [DisplayName("Profesion")]
+        public ProfessionModel Profession { get; set; }
+
+        [DisplayName("Descripción")]
         public string Description { get; set; }
     }
 }

@@ -12,5 +12,7 @@ namespace Lawyers.Contract.Entities
 
         public string Name { get; set; }
 
+        public int ProvinceId { get; set; }
+
     }
 }

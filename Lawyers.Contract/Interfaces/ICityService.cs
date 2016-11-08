@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Lawyers.Contract.Interfaces
 {
-    public interface INewService
+    public interface ICityService
     {
-        List<NewsModel> NewsList();
+        List<CityModel> CitiesList(); //Lista de todas las ciudades
 
-        void Create(NewsModel Noticia);
+        List<CityModel> CitiesByProvinceList(int Provincia); //Lista de ciudades de una provincia
 
-
+       
     }
 }

@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Lawyers.Contract.Interfaces
 {
-    public interface INewService
+    public interface IUsers
     {
-        List<NewsModel> NewsList();
-
-        void Create(NewsModel Noticia);
-
-
+        List<UserModel> UsersList();
+        void Create(UserModel Usuario); 
     }
 }

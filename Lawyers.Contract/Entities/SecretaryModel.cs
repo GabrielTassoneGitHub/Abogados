@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lawyers.Contract.Entities
 {
-    public class AdministratorModel : PersonModel
+    public class SecretaryModel:PersonModel
     {
-        public int AdministratorId { get; set; }
+        public int SecretaryId { get; set; }
+
+        
     }
 }

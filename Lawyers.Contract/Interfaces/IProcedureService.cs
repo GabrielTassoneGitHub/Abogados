@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Lawyers.Contract.Interfaces
 {
-    public interface INewService
+    public interface IProcedureService
     {
-        List<NewsModel> NewsList();
+        List<ProcedureModel> ProceduresList();
 
-        void Create(NewsModel Noticia);
-
-
+        void Create(ProcedureModel Tramite);
     }
 }
