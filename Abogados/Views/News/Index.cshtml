@@ -46,9 +46,9 @@
             </td>
             <td>
                 <i class="material-icons w3-medium"><strong>edit</strong></i>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Edit", "Edit", new { id=item.NewsId }) |
                 <i class="material-icons w3-medium w3-text-red"><strong>close</strong></i>
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })           
+                @Html.ActionLink("Delete", "Delete", new { id=item.NewsId })           
             </td>
         </tr>
     }

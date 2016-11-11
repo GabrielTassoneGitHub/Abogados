@@ -40,14 +40,13 @@
             </td>
             <td>
                 <i class="material-icons w3-medium"><strong>edit</strong></i>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Edit", "Edit", new {  id=item.SpecializationId }) |
                 <i class="material-icons w3-medium w3-text-red"><strong>close</strong></i>
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Delete", "Delete", new { id=item.SpecializationId })
             </td>
         </tr>
     }
 </table>
-
 
 <p>
     <a class="w3-btn w3-white w3-border w3-round-large w3-border-green w3-text-green" href="~/Specializations/Create">

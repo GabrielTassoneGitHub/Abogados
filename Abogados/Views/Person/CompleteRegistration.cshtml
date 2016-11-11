@@ -2,6 +2,13 @@
 
 @{
     ViewBag.Title = "CompleteRegistration";
+
+    List<SelectListItem> ListaEspecializaciones = new List<SelectListItem>();
+    foreach (var e in ViewBag.Specializations)
+    {
+        SelectListItem newItem = new SelectListItem() { Text = e.Name.ToString(), Value = e.SpecializationId.ToString() };
+        ListaEspecializaciones.Add(newItem);
+    }
 }
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,26 +25,21 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.PersonId)
         @Html.HiddenFor(model => model.LawyerId)
-
+        
         <div class="w3-container w3-green">
             <h2>Datos Profesionales</h2>
         </div>
         <hr />
         <form>
             <fieldset>
+                <p class="w3-margin-bottom">Dentro de esta seccion podrá seleccionar su especialidad y editar la descripcion de su perfil profesional.</p>
                 <legend></legend>
                 <div class="form-group">
                     <div class="col-md-2">
-                        <label for="model.Name">Nombre</label>
-                        @Html.EditorFor(model => model.Name)
-                        @Html.ValidationMessageFor(model => model.Name)
-                    </div>
-                    <div class="col-md-2"> </div>
-                    <div class="col-md-2">
-                        <label for="model.LastName">Apellido</label>
-                        @Html.EditorFor(model => model.LastName)
-                        @Html.ValidationMessageFor(model => model.LastName)
-                    </div>
+                        <label for="model.Specialization">Especializacion</label>
+                        @Html.DropDownListFor(model => model.Specialization.SpecializationId, ListaEspecializaciones, "Seleccione especializacion")
+                        @Html.ValidationMessageFor(model => model.Specialization.SpecializationId)
+                    </div>                   
                 </div>
 
                 <div class="form-group">
