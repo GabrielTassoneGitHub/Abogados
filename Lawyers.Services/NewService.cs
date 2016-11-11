@@ -46,5 +46,53 @@ namespace Lawyers.Services
             }
 
         }
+
+        public NewsModel Edit(int idNoticia)
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                var noticia = db.News.FirstOrDefault(x => x.NewsId == idNoticia);
+                NewsModel _noticia = new NewsModel()
+                {
+                    NewsId = noticia.NewsId,
+                    Title = noticia.Title,
+                    Body = noticia.Body,
+                    Date = noticia.Date,
+                };
+                return _noticia;
+            }
+        }
+
+        public bool Edit(int idNoticia, NewsModel notic)
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                try
+                {
+                    var noticia = db.News.FirstOrDefault(x => x.NewsId == idNoticia);
+                    noticia.Title = notic.Title;
+                    noticia.Body = notic.Body;
+                    noticia.Date = notic.Date;
+                    db.SaveChanges();
+                    return true;
+                }
+                catch
+                {
+
+                    return false;
+                }
+
+            }
+        }
+
+        public void Delete(int idNoticia)
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                var noticia = db.News.FirstOrDefault(x => x.NewsId == idNoticia);
+                db.News.Remove(noticia);
+                db.SaveChanges();
+            }
+        }
     }
 }

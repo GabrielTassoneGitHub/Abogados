@@ -25,7 +25,57 @@ namespace Lawyers.Services
             }
         }
 
-        
+        public SpecializationModel Edit(int idEspecializacion)
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                var especializacion = db.Specializations.FirstOrDefault(x => x.SpecializationId == idEspecializacion);
+                SpecializationModel _especializacion = new SpecializationModel()
+                {
+                    SpecializationId = especializacion.SpecializationId,
+                    Name = especializacion.Name,
+                    Description = especializacion.Description,
+                };
+                return _especializacion;
+            }
+        }
+
+        public bool Edit(int idEspecializacion, SpecializationModel s)
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                try
+                {
+                    var especializacion = db.Specializations.FirstOrDefault(x => x.SpecializationId == idEspecializacion);
+                    especializacion.Description = s.Description;
+                    especializacion.Name = s.Name;
+                    especializacion.SpecializationId = s.SpecializationId;
+                    db.SaveChanges();
+                    return true;
+                }
+                catch 
+                {
+
+                    return false;
+                }
+                
+            }
+        }
+
+        public SpecializationModel FirstSpecialization()
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                var primera = db.Specializations.First();
+                SpecializationModel especializacion = new SpecializationModel()
+                {
+                    SpecializationId = primera.SpecializationId,
+                    Name = primera.Name,
+                    Description = primera.Description,
+                };
+                return especializacion;
+            }
+        }
 
         public List<SpecializationModel> SpecializationsList()
         {
@@ -43,6 +93,18 @@ namespace Lawyers.Services
 
             }
         }
+
+        public void Delete(int idEspecializacion)
+        {
+            using (LawyersConnection db = new LawyersConnection())
+            {
+                var especializacion = db.Specializations.FirstOrDefault(x => x.SpecializationId == idEspecializacion);                
+                db.Specializations.Remove(especializacion);
+                db.SaveChanges();
+            }
+        }
+
+
 
         /*public void Edit(SpecializationModel Especializacion)
         {
