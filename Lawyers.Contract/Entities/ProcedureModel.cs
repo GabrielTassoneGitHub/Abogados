@@ -9,6 +9,10 @@ namespace Lawyers.Contract.Entities
 {
     public class ProcedureModel
     {
+        public ProcedureModel()
+        {
+            this.StateId = 1;
+        }
         public int ProcedureId { get; set; }
 
         [Required]
@@ -20,11 +24,11 @@ namespace Lawyers.Contract.Entities
         public string Description { get; set; }
 
         [Required]
-        public LawyerModel Lawyer { get; set; }
+        public int LawyerId { get; set; }
 
         [Required]
-        public ClientModel Client { get; set; }
+        public int ClientId { get; set; }
 
-        public StateModel State { get; set; }
+        public int StateId { get; set; }
     }
 }

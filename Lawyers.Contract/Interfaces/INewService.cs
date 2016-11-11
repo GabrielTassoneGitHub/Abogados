@@ -13,6 +13,13 @@ namespace Lawyers.Contract.Interfaces
 
         void Create(NewsModel Noticia);
 
+        NewsModel Edit(int idNoticia);
+
+        bool Edit(int id, NewsModel noticia);
+
+        void Delete(int idNoticia);
+
+
 
     }
 }

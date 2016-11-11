@@ -12,5 +12,13 @@ namespace Lawyers.Contract.Interfaces
         List<SpecializationModel> SpecializationsList();
 
         void Create(SpecializationModel Especializacion);
+
+        SpecializationModel FirstSpecialization();
+
+        SpecializationModel Edit(int idEspecializacion);
+        bool Edit(int id, SpecializationModel specialization);
+
+        void Delete(int idEspecializacion);
+
     }
 }

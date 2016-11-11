@@ -19,6 +19,7 @@ namespace Lawyers.Contract.Interfaces
 
         List<ClientModel> ClientsList();
 
+
         void Create(LawyerModel Lawyer);
 
         void Create(AccountantModel Accountant);
@@ -29,8 +30,29 @@ namespace Lawyers.Contract.Interfaces
 
         void Create(ClientModel Client);
 
-        LawyerModel Instance(PersonModel Person);
 
+        LawyerModel InstanciaAbogado(PersonModel Person);        
+
+        AccountantModel InstanciaContador(PersonModel Person);
+
+        AdministratorModel InstanciaAdminRRHH(PersonModel person);
+
+        SecretaryModel InstanciaSecretaria(PersonModel person);
+
+        ClientModel InstanciaCliente(PersonModel person);
+
+
+        LawyerModel BuscarAbogado();
+
+        ClientModel EditClient();
+
+        bool EditClient(int id, ClientModel cliente);
+
+        LawyerModel EditLawyer();
+
+        bool EditLawyer(int id, LawyerModel abogado);
+
+        bool ExisteAbogado(int id);       
 
     }
 }

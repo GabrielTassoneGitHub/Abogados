@@ -11,6 +11,22 @@ namespace Lawyers.Contract.Interfaces
     {
         List<ProcedureModel> ProceduresList();
 
+        List<ProcedureModel> ListaTramitesPorAbogado(int idAbogado);
+
+        List<ProcedureModel> ListaTramitesPorCliente(int idCliente);
+
         void Create(ProcedureModel Tramite);
+
+        string BuscarCliente(int documento);
+
+        string BuscarEstado(int estado);
+
+        string BuscarAbogado(int idAbogado);
+
+        int BuscarIdAbogado();
+
+        int BuscarIdCliente();
+
+        int BuscarClientePorDNI(int documento);
     }
 }

@@ -95,6 +95,8 @@
     <Compile Include="Entities\CityModel.cs" />
     <Compile Include="Entities\ClientModel.cs" />
     <Compile Include="Entities\DocTypeModel.cs" />
+    <Compile Include="Entities\Correos.cs" />
+    <Compile Include="Entities\EmailModel.cs" />
     <Compile Include="Entities\LawyerModel.cs" />
     <Compile Include="Entities\NewModel.cs" />
     <Compile Include="Entities\PersonModel.cs" />
