@@ -26,12 +26,7 @@ namespace Abogados.Controllers
             return View(service.NewsList());
         }
 
-        // GET: News/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
+        
         // GET: News/Create
         public ActionResult Create()
         {
@@ -65,16 +60,19 @@ namespace Abogados.Controllers
         // GET: News/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var noticia = service.Edit(id);
+
+            return View(noticia);
         }
 
         // POST: News/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, [Bind(Include = "NewsId,Title,Body,Date")]NewsModel noticia)
         {
             try
             {
                 // TODO: Add update logic here
+                service.Edit(id, noticia);
 
                 return RedirectToAction("Index");
             }
@@ -87,17 +85,17 @@ namespace Abogados.Controllers
         // GET: News/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var noticia = service.Edit(id);
+            return View(noticia);
         }
 
         // POST: News/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, NewsModel noticia)
         {
             try
-            {
-                // TODO: Add delete logic here
-
+            {                
+                service.Delete(id);
                 return RedirectToAction("Index");
             }
             catch

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lawyers.Contract.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,15 @@ namespace Abogados.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(EmailModel email)
+        {
+            var correo = new Correos();
+            correo.EnviarEmail(email.From, email.Password, email.To, email.Body, email.Subject);
+
+            return RedirectToAction("Index");
         }
 
        

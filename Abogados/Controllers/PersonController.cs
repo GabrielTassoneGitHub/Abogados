@@ -7,6 +7,7 @@ using Abogados.Models;
 using Lawyers.Contract.Entities;
 using Lawyers.Contract.Interfaces;
 using WebMatrix.WebData;
+using System.Web.Security;
 
 namespace Abogados.Controllers
 {
@@ -18,15 +19,17 @@ namespace Abogados.Controllers
         private IProvinceService serviceProvincias;
         private IPersonService servicePersonas;
         private IProfessionService serviceProfesiones;
+        private ISpecializationService serviceEspecializaciones;
         
 
-        public PersonController(IDocTypeService serviceTiposDoc, ICityService serviceCiudades, IProvinceService serviceProvincias, IPersonService servicePersonas, IProfessionService serviceProfesiones)
+        public PersonController(ISpecializationService serviceEspecializaciones, IDocTypeService serviceTiposDoc, ICityService serviceCiudades, IProvinceService serviceProvincias, IPersonService servicePersonas, IProfessionService serviceProfesiones)
         {
             this.serviceTiposDoc = serviceTiposDoc;
             this.serviceCiudades = serviceCiudades;
             this.serviceProvincias = serviceProvincias;
             this.servicePersonas = servicePersonas;
             this.serviceProfesiones = serviceProfesiones;
+            this.serviceEspecializaciones = serviceEspecializaciones;
         }
 
         // GET: Person
@@ -50,10 +53,11 @@ namespace Abogados.Controllers
         }
 
         // GET: Person/Create
+        
         public ActionResult Create()
         {
             ViewBag.DocType = serviceTiposDoc.DocTypesList();
-            ViewBag.Profession = serviceProfesiones.ProfessionsList();            
+            ViewBag.Profession = serviceProfesiones.ProfessionsList();
             return View();
         }
         
@@ -71,15 +75,40 @@ namespace Abogados.Controllers
                     switch(profession)
                     {
                         case "Abogado":
-                            var nuevoAbogado = servicePersonas.Instance(persona);                                                    
+                            var nuevoAbogado = servicePersonas.InstanciaAbogado(persona);
+                            nuevoAbogado.Specialization = serviceEspecializaciones.FirstSpecialization();                                                
                             servicePersonas.Create(nuevoAbogado);
+                            Roles.AddUserToRole(WebSecurity.CurrentUserName, "Employees");                          
                             break;
 
-                        case "Contador Publico":
+                        case "Contador":
+                            var nuevoContador = servicePersonas.InstanciaContador(persona);
+                            servicePersonas.Create(nuevoContador);
+                            Roles.AddUserToRole(WebSecurity.CurrentUserName, "Employees");
                             break;
 
-                    }                                  
-                    return RedirectToAction("CompleteRegistration","Person");
+                        case "Administrador de RRHH":
+                            var nuevoAdminRRHH = servicePersonas.InstanciaAdminRRHH(persona);
+                            servicePersonas.Create(nuevoAdminRRHH);
+                            Roles.AddUserToRole(WebSecurity.CurrentUserName, "Employees");
+                            break;
+
+                        case "Secretaria":
+                            var nuevaSecretaria = servicePersonas.InstanciaSecretaria(persona);
+                            servicePersonas.Create(nuevaSecretaria);
+                            Roles.AddUserToRole(WebSecurity.CurrentUserName, "Administrator");
+                            break;
+
+                    }        
+                    if (profession == "Abogado")
+                    {
+                        return RedirectToAction("CompleteRegistration", "Person");
+                    }    
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }        
+                        
                 }
                 else
                 {
@@ -88,6 +117,7 @@ namespace Abogados.Controllers
             }
             catch
             {
+                ViewBag.Errores = "Se produjo un error en la carga de sus datos";
                 return View();
             }
         }
@@ -95,7 +125,7 @@ namespace Abogados.Controllers
         //GET: Person/CompleteRegistration
         public ActionResult CompleteRegistration()
         {
-            
+            ViewBag.Specializations = serviceEspecializaciones.SpecializationsList();
             return View();
         }
 
@@ -103,6 +133,7 @@ namespace Abogados.Controllers
         [HttpPost]
         public ActionResult CompleteRegistration([Bind(Include = "Specialization")]LawyerModel Abogado)
         {
+            ViewBag.Specializations = serviceEspecializaciones.SpecializationsList();
             try
             {
                 if (ModelState.IsValid == true)
@@ -111,7 +142,7 @@ namespace Abogados.Controllers
                 }
                 else
                 {
-                    return View();
+                    return View(Abogado);
                 }
             }
             catch
@@ -124,20 +155,25 @@ namespace Abogados.Controllers
 
 
         // GET: Person/Edit/5
-        public ActionResult Edit(int id)
+        [Authorize(Roles ="Employees,Administrator")]
+        public ActionResult Edit()
         {
-            return View();
+            ViewBag.Profession = serviceProfesiones.ProfessionsList();
+            var abogadoAEditar = servicePersonas.EditLawyer();
+            return View(abogadoAEditar);
         }
 
         // POST: Person/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit([Bind(Include = "Name,LastName,BirthDate,Nationality,Province,City,Genre,PhoneNumber,Description,Profession")]PersonModel personaAEditar)
         {
             try
             {
-                // TODO: Add update logic here
+                ViewBag.Profession = serviceProfesiones.ProfessionsList();
+                var abogadoAEditar = servicePersonas.InstanciaAbogado(personaAEditar);
+                servicePersonas.EditLawyer(personaAEditar.PersonId, abogadoAEditar);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
             catch
             {

@@ -18,18 +18,15 @@ namespace Abogados.Controllers
         }
 
         // GET: Specializations
+        [Authorize(Roles = "Administrador")]
         public ActionResult Index()
         {
             return View(service.SpecializationsList());
         }
 
-        // GET: Specializations/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
         // GET: Specializations/Create
+        [Authorize(Roles = "Administrador")]
         public ActionResult Create()
         {
             return View();
@@ -60,18 +57,22 @@ namespace Abogados.Controllers
         }
 
         // GET: Specializations/Edit/5
+        [Authorize(Roles = "Administrador")]
         public ActionResult Edit(int id)
         {
-            return View();
+            var especializacion = service.Edit(id);
+
+            return View(especializacion);
         }
 
         // POST: Specializations/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id,[Bind(Include = "SpecializationId,Name,Description")]SpecializationModel especializacion)
         {
             try
             {
                 // TODO: Add update logic here
+                service.Edit(id, especializacion);
 
                 return RedirectToAction("Index");
             }
@@ -82,18 +83,21 @@ namespace Abogados.Controllers
         }
 
         // GET: Specializations/Delete/5
+        [Authorize(Roles = "Administrador")]
         public ActionResult Delete(int id)
         {
-            return View();
+            var especializacion = service.Edit(id);
+            return View(especializacion);
         }
 
         // POST: Specializations/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, SpecializationModel especializacion)
         {
             try
             {
                 // TODO: Add delete logic here
+                service.Delete(id);
 
                 return RedirectToAction("Index");
             }

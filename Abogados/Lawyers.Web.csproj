@@ -234,12 +234,13 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\ProceduresController.cs" />
     <Compile Include="Controllers\SpecializationsController.cs" />
-    <Compile Include="Controllers\StudyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -312,16 +313,22 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Person\Create.cshtml" />
-    <Content Include="Views\Study\Index.cshtml" />
-    <Content Include="Views\Study\Edit.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
-    <Content Include="Views\Person\Edit.cshtml" />
     <Content Include="Views\Person\Details.cshtml" />
     <Content Include="Views\News\Create.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Specializations\Create.cshtml" />
     <Content Include="Views\Specializations\Index.cshtml" />
     <Content Include="Views\Person\CompleteRegistration.cshtml" />
+    <Content Include="Views\Procedures\Index.cshtml" />
+    <Content Include="Views\Procedures\Create.cshtml" />
+    <Content Include="Views\Specializations\Edit.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Client\Edit.cshtml" />
+    <Content Include="Views\Specializations\Delete.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\Person\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

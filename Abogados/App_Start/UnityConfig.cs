@@ -49,6 +49,7 @@ namespace Abogados.App_Start
             container.RegisterType<IProvinceService, ProvinceService>();
             container.RegisterType<IPersonService, PersonService>();
             container.RegisterType<IProfessionService, ProfessionService>();
+            container.RegisterType<IProcedureService, ProcedureService>();
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());
         }
